@@ -1,0 +1,47 @@
+POST http://127.0.0.1:8000/snippets/
+Authorization: Basic tonin:123mudar!
+Content-Type: application/x-www-form-urlencoded
+
+code="print(123)"
+
+###
+
+POST http://127.0.0.1:8000/snippets/
+Authorization: Basic oliveira:123mudar
+Content-Type: application/x-www-form-urlencoded
+
+code="print(123)"
+
+###
+
+GET  http://127.0.0.1:8000/snippets/
+
+###
+
+GET  http://127.0.0.1:8000/snippets/1
+
+###
+
+PATCH http://127.0.0.1:8000/snippets/1/
+Authorization: Basic oliveira:123mudar
+Content-Type: application/x-www-form-urlencoded
+
+code="print(12345)"
+
+###
+
+PATCH http://127.0.0.1:8000/snippets/1/
+Authorization: Basic tonin:123mudar!
+Content-Type: application/x-www-form-urlencoded
+
+code="print(12345)"
+
+###
+POST http://127.0.0.1:8000/snippets/
+Authorization: Basic tonin:123mudar!
+Content-Type: application/json
+
+{
+  "example": "test",
+  "exampleRequired": "fdsaf`fdsaf"
+}
